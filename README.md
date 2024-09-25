@@ -6,5 +6,5 @@ I will copy some of the xv6-rsicv OS (https://github.com/mit-pdos/xv6-riscv) cod
 
 [potential updates of this file will be added to this line,...]
 
-I was hoping this repository can also help other people who wanted to learn OS but feel intimidated by the complicated code and backed away to feel it is not scary. Not sure how long it will take me to do this, but got to start somewhere. Good Luck to me!
+I was hoping this repository can also help other people who wanted to learn OS but feel intimidated by the complicated code to feel it is not scary. Not sure how long it will take me to do this, but got to start somewhere. Good Luck to me!
 
