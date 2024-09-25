@@ -57,11 +57,9 @@ The firmware sets up memory regions that define access permissions (read, write,
 qemu and risc-v firmware:<br>
 
 1. firmware image:<br>
-
 qemu includes a firmware image (often based on OpenSBI or similar implementation) that emulates the necessary low-level initialization routines for riscv systems. This firmware is responsible for booting the system and providing the SBI interface for the guest operating system. <br>
 
 2. booting process:<br>
-
 when you start a riscv emulated system in qemu, it loads the firmware images from a specified location (or uses a default one if not specified) into memory at the designated firmware base address (i.e. 0x80000000).<br>
 The firmware executes and initializes the emulated hardware environment, prepares the memory map, and loads the operating system kernel into RAM.<br>
 
