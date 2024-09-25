@@ -33,11 +33,8 @@ The firmware implements a Supervisor Binary Interface (SBI), which provides a se
 
 1. Boot process<br>
 Power-On Reset: The processor resets and starts executing instructions from the firmware base. <br>
-
 Firmware Execution: The firmware initializes hardware and sets up memory.<br>
-
 Loading the OS: The firmware loads the operating system kernel into memory, often using a specific bootloader.<br>
-
 Transition to OS: Once the OS is loaded, control is handed over, and the OS takes over managing the system.<br>
 
 2. Boot Tme<br>
