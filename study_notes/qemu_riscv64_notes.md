@@ -2,7 +2,7 @@
 
 The result from terminal #1 says the firmware base starts at 0x80000000, so probably that is why. Between 0x00000000 and 0x80000000, is probably reserved for some other i/o device stuff.
 
-### With some googling:<br>
+#### With some googling:<br>
 
 **Boot ROM**, an integrated circuit (chip) that is located on the motherboard and stores the firmware code responsible for booting the computer. This name is not standardized, so other developers often call it **Flash ROM**, **BIOS Flash**, **Boot Flash**, **SPI Flash**, etc but these terms are interchangeable. <br>
 
