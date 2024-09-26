@@ -293,7 +293,11 @@ qemu-system-riscv64 -machine virt -bios none -kernel kernel/kernel -m 128M -smp 
     This adds a VirtIO block device to the system. It connects the drive (identified by x0) to the virtio-mmio-bus.0. VirtIO is a virtualized device standard that allows for efficient communication between the guest operating system and the host.
 
 
+**Boot Entry Point:** xv6's kernel has a predefined entry point where execution starts. When QEMU loads the kernel, it jumps directly to this entry point, effectively treating it as the first instruction to execute.
 
+**Kernel Initialization:** Once execution begins, the xv6 kernel has its own initialization routines. It sets up the necessary environment, including memory management, CPU state, and device initialization, allowing the OS to run.
+
+**No BIOS Calls:** Without a BIOS, xv6 does not rely on any firmware-provided services (like interrupts or device initialization). Instead, it implements its own methods to interact with hardware.
 
 
 
