@@ -4,6 +4,8 @@ The result from terminal #1 says the firmware base starts at 0x80000000, so prob
 
 #### With some googling:<br>
 
+Before we talk about xv6:<br>
+
 **Boot ROM**, an integrated circuit (chip) that is located on the motherboard and stores the firmware code responsible for booting the computer. This name is not standardized, so other developers often call it **Flash ROM**, **BIOS Flash**, **Boot Flash**, **SPI Flash**, etc but these terms are interchangeable. <br>
 
 
@@ -254,6 +256,9 @@ kvmvapic.bin       openbios-ppc         petalogix-ml605.dtb                     
 ```
 
 **Other notes**<br>
+Now we see how QEMU handles memory layout. 
+
+When you run QEMU with the provided parameters, it automatically maps the kernel to start at the firmware base address. This means the QEMU environment is set up to load the kernel binary into memory at 0x80000000. We set the **-bios** to none in the command below. Even though QEMU reports the address, xv6 does not require any firmware involvement. The xv6 kernel is aware of its entry point and can correctly initialize from this address once it is loaded thereby QEMU.
 
 In the xv6-riscv makefile, you might see something like
 ``` 
