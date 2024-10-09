@@ -266,13 +266,13 @@ qemu-system-riscv64 -machine virt -bios none -kernel kernel/kernel -m 128M -smp 
 ```
 
 ```qemu-system-riscv64```:
-    This specifies that you're using the QEMU emulator for the RISC-V 64-bit architecture. <br>
+    This specifies that you're using the QEMU emulator for the risc-v 64-bit architecture. <br>
 
 ```-machine virt```:
     This option sets the machine type to virt, which is a generic virtual machine for RISC-V. It emulates various peripherals useful for development.
 
 ```-bios none```:
-    This tells QEMU not to load any BIOS firmware. In the context of XV6, the operating system itself is often configured to handle system initialization.
+    This tells QEMU not to load any BIOS firmware. In the context of xv6, the operating system itself is often configured to handle system initialization.
 
 ```-kernel kernel/kernel```:
     This specifies the kernel binary to load. In this case, it's pointing to kernel/kernel, which is the compiled XV6 kernel.
@@ -284,7 +284,7 @@ qemu-system-riscv64 -machine virt -bios none -kernel kernel/kernel -m 128M -smp 
     This specifies the number of CPU cores (or threads) to emulate. Here, it is set to 3.
 
 ```-nographic```:
-    This option disables graphical output and uses the terminal for input/output instead. This is common when running operating systems like XV6, which do not have a graphical interface.
+    This option disables graphical output and uses the terminal for input/output instead. This is common when running operating systems like xv6, which do not have a graphical interface.
 
 ```-drive file=fs.img,if=none,format=raw,id=x0```:
     This sets up a disk drive. file=fs.img specifies the image file to use as the disk. if=none indicates that this is not attached to a specific interface yet, and format=raw specifies that the image is in raw format. id=x0 assigns an identifier to this drive.
